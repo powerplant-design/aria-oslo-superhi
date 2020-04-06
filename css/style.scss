@@ -11,6 +11,18 @@ $green-mid: #05DC82;
 $pink-mid: #F5BABA;
 $blue-mid: #FBFF21;
 
+body::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+body::-webkit-scrollbar-track {
+background: $blue-mid;
+}
+
+body::-webkit-scrollbar-thumb {
+background: $green-mid;
+}
+
 html {
     scroll-behavior: smooth;
 }
