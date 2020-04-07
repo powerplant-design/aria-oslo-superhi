@@ -57,9 +57,9 @@ p {
     margin-bottom: 0.8rem;
     font-weight: 200;
 }
-img {
-    border-radius: 20px;
-}
+// img {
+//     border-radius: 20px;
+// }
 
 header {
     width: 100%;
@@ -108,6 +108,7 @@ section {
     }
     img {
         max-height: 640px;
+        object-fit: contain;
     }
     .description {
         grid-column: 9 / span 4;
@@ -178,16 +179,17 @@ footer {
     }
 }
 @media only screen and (max-width:945px) {
-    body {
-        // background-color: blue;
-        // margin: 2rem 1rem;
+    h2 {
+        font-size: 1.6rem;
     }
-
+    body {
+        margin: 2rem 1rem;
+    }
     header {
+        height: auto;
         flex-direction: column;
         img {
-            max-width: 300px;
-            // margin-bottom: -10px;
+            max-width: 260px;
         }
         a {
             font-size: 1.4rem;
@@ -198,8 +200,66 @@ footer {
         h1 {
         font-size: 1.6rem;
         line-height: 1.5;
-        // max-width: 500px;
     }
 }
 
+}
+
+@media only screen and (max-width: 660px) {
+    h2 {
+        font-size: 1.4rem;
+    }
+    body {
+        margin: 1.8rem 0.4rem;
+        padding: 1rem;
+        font-size: 14px;
+    }
+    header {
+        img {
+            width: 100%;
+        }
+        nav {
+            margin-top: -10px;
+        }
+        a {
+            font-size: 1.2rem;
+            margin: 0 4px;
+        }
+    }
+    section {
+        margin: 40px 0;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        h1 {
+            grid-column: 1 / span 4;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+    }
+    .project {
+        padding-top: 1.6rem;
+        .artwork {
+            grid-column: 1 / span 4;
+        }
+        .description {
+            grid-column: 1 / span 4;
+        } 
+    }
+    .about {
+        .about-headshot {
+            grid-column: 1 / span 4;
+        }
+        .about-description {
+            grid-column: 1 / span 4;
+        } 
+    }
+    .contact {
+        .form {
+            grid-column: 1 / span 4;
+        } 
+    }
+    footer a {
+        font-size: 1.4rem;
+    }
 }
