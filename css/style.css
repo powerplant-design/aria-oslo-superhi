@@ -181,6 +181,7 @@ section h1 {
 
 .contact {
   margin-bottom: 2rem;
+  min-height: 50vh;
 }
 
 .contact a {

@@ -144,12 +144,13 @@ section {
 
 .contact {
     margin-bottom: 2rem;
+    min-height: 50vh;
     a {
         color: $pink-mid;
     }
     .form {
         grid-column: 3 / span 8;
-    } 
+    }
     label {
         display: block;
         margin: 1rem 0;
