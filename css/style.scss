@@ -11,6 +11,8 @@ $green-mid: #05DC82;
 $pink-mid: #F5BABA;
 $yellow-mid: #FBFF21;
 
+$font-violet: Violet-Sans, Arial, Helvetica, sans-serif;
+
 body::-webkit-scrollbar {
     width: 0.8rem;
   }
@@ -40,9 +42,12 @@ body {
 a {
     text-decoration: none;
     transition: color 400ms;
+    &:focus {
+        color: $pink-mid;
+    }
 }
 h1, h2, a {
-    font-family: Violet-Sans, Arial, Helvetica, sans-serif;
+    font-family: $font-violet;
 }
 h1 {
     line-height: 1.4;
@@ -57,9 +62,6 @@ p {
     margin-bottom: 0.8rem;
     font-weight: 200;
 }
-// img {
-//     border-radius: 20px;
-// }
 
 header {
     width: 100%;
@@ -141,20 +143,58 @@ section {
 }
 
 .contact {
+    margin-bottom: 2rem;
+    a {
+        color: $pink-mid;
+    }
     .form {
-        grid-column: 4 / span 6;
+        grid-column: 3 / span 8;
     } 
+    label {
+        display: block;
+        margin: 1rem 0;
+    }
+    input, textarea {
+        width: 100%;
+        background: $black;
+        border: 2px soild $white;
+        color: $white;
+        padding: 0.5rem 1rem;
+        transition: border 400ms;
+    }
+    textarea {
+        min-height: 200px;
+        resize: vertical;
+    }
+    button {
+        background: $yellow-mid;
+        font-family: $font-violet;
+        font-size: 1.4rem;
+        padding: 0.6rem 1.2rem;
+        border: none;
+    }
+    input, textarea {
+        &:focus {
+            outline: $yellow-mid auto 5px;
+            border: 2px solid $pink-mid;
+        }
+    }
+    .button-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 footer {
     display: flex;
     justify-content: center;
     a {
-        color: $green-mid;
+        color: $white;
         font-size: 2.4rem;
         margin: 0 16px;
         &:hover {
-            color: white;
+            color: $pink-mid;
         }
     }
 }
@@ -227,7 +267,7 @@ footer {
         }
     }
     section {
-        margin: 40px 0;
+        margin: 24px 0;
         grid-template-columns: repeat(4, 1fr);
         gap: 24px;
         h1 {
@@ -260,6 +300,6 @@ footer {
         } 
     }
     footer a {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 }

@@ -38,6 +38,10 @@ a {
   transition: color 400ms;
 }
 
+a:focus {
+  color: #F5BABA;
+}
+
 h1, h2, a {
   font-family: Violet-Sans, Arial, Helvetica, sans-serif;
 }
@@ -175,10 +179,61 @@ section h1 {
   grid-column: 8 / span 5;
 }
 
+.contact {
+  margin-bottom: 2rem;
+}
+
+.contact a {
+  color: #F5BABA;
+}
+
 .contact .form {
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 6;
-  grid-column: 4 / span 6;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 8;
+  grid-column: 3 / span 8;
+}
+
+.contact label {
+  display: block;
+  margin: 1rem 0;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  background: #000720;
+  border: 2px soild white;
+  color: white;
+  padding: 0.5rem 1rem;
+  -webkit-transition: border 400ms;
+  transition: border 400ms;
+}
+
+.contact textarea {
+  min-height: 200px;
+  resize: vertical;
+}
+
+.contact button {
+  background: #FBFF21;
+  font-family: Violet-Sans, Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+}
+
+.contact input:focus, .contact textarea:focus {
+  outline: #FBFF21 auto 5px;
+  border: 2px solid #F5BABA;
+}
+
+.contact .button-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer {
@@ -191,13 +246,13 @@ footer {
 }
 
 footer a {
-  color: #05DC82;
+  color: white;
   font-size: 2.4rem;
   margin: 0 16px;
 }
 
 footer a:hover {
-  color: white;
+  color: #F5BABA;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -264,7 +319,7 @@ footer a:hover {
     margin: 0 4px;
   }
   section {
-    margin: 40px 0;
+    margin: 24px 0;
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     gap: 24px;
@@ -306,7 +361,7 @@ footer a:hover {
     grid-column: 1 / span 4;
   }
   footer a {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
